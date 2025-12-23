@@ -1,0 +1,125 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body{
+    background-color: #2b1d0f;
+    color: white;
+}
+
+header nav{
+    background-color: #212121;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+}
+
+header nav h1{
+    font-size: 30px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+header nav form{
+    display: flex;
+    justify-content: space-between;
+}
+
+form input[type="text"]{
+    flex-grow: 1;
+    margin-right: 10px;
+}
+
+form input[type="text"], button[type="submit"]{
+    border: none;
+    font-size: 18px;
+    padding: 8px;
+    border-radius: 8px;
+}
+
+form button[type="submit"]{
+    background-color: #e39014;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+form button[type="submit"]:hover{
+    background-color: #f7b34d;
+}
+
+/* Main Section */
+.recipeContainer{
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    width: 95%;
+    margin: 10px auto;
+    padding: 20px;
+}
+
+.recipe{
+    background-color: #f3e2ad;
+    display: flex;
+    flex-direction: column;
+    color: rgb(9, 15, 97);
+    border-radius: 20px;
+    box-shadow: 10px 10px 15px #1fdf5c;
+    cursor: pointer;
+    max-width: 350px;
+}
+
+.recipe:hover{
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+}
+
+.recipe img{
+    width: 100%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.recipe h3{
+    font-size: 22px;
+    font-weight: 600;
+    padding: 10px;
+}
+
+.recipe p{
+    font-size: 18px;
+    padding: 0 7px 7px 7px;
+    flex-grow: 1;
+}
+
+.recipe button{
+    background-color: rgb(235, 169, 169);
+    border: none;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding: 10px;
+}
+
+.recipe button a{
+    text-decoration: none;
+    font-size: 20px;
+    color: rgb(132, 3, 3);
+    padding-bottom: 5px;
+}
+
+/* Responsive Code */
+@media (max-width: 600px){
+    header nav{
+        flex-direction: column;
+    }
+    header nav form{
+        width: 80%;
+        margin-top: 20px;
+    }
+}
